@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_chao",
+  "eventList":[],
   "managed":true,
-  "name":"obj_player",
+  "name":"obj_chao",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_brock_idle",
-    "path":"sprites/spr_brock_idle/spr_brock_idle.yy",
+    "name":"spr_chao",
+    "path":"sprites/spr_chao/spr_chao.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -35,9 +35,11 @@
   },
   "name":"Plataforma",
   "resources":[
+    {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_brock_idle","path":"sprites/spr_brock_idle/spr_brock_idle.yy",},},
+    {"id":{"name":"spr_chao","path":"sprites/spr_chao/spr_chao.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

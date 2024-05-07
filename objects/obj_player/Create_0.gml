@@ -6,10 +6,14 @@ direc = 0;
 #endregion
 
 #region //Fisica
-grav = 0.09;
+grav = 0.10;
 velv = 0;
 velh = 0;
-vel = 1.5;
+vel = 1;
 #endregion
 
+#region //Combate
 vida = 5;
+alfa_hit = 0;
+alarm[0] = 0;
+#endregion

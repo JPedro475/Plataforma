@@ -5,6 +5,30 @@ cima = keyboard_check_pressed(vk_space);
 //Movimentação
 velh = (dir - esq) * vel;
 
+#region //Direção
+if dir 
+{
+	direc = 0;
+	sprite_index = spr_player_andando;
+}
+else if esq
+{
+	direc = 1;
+	sprite_index = spr_player_andando_esq;
+}
+else
+{
+	if direc == 0
+	{
+		sprite_index = spr_player_idle;
+	}
+	else if  direc == 1 
+	{
+		sprite_index = spr_player_idle_esq;
+	}
+}
+#endregion
+
 #region //Gravidade
 if !place_meeting(x,y + 1, obj_chao)
 {

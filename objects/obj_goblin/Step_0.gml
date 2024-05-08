@@ -26,3 +26,8 @@ else if direc == 1
 	 x -= vel;
 }
 #endregion
+
+if vida <=0 
+{
+	instance_destroy();
+}

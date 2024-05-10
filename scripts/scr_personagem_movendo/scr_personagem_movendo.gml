@@ -1,8 +1,8 @@
 // Os recursos de script mudaram para a v2.3.0; veja
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
 function scr_personagem_movendo(){
-	dir = keyboard_check(ord("D"));
-	esq = keyboard_check(ord("A"));
+	dir = keyboard_check(vk_right);
+	esq = keyboard_check(vk_left);
 	cima = keyboard_check_pressed(vk_space);
 
 	//Movimentação
@@ -74,7 +74,7 @@ function scr_personagem_movendo(){
 	#endregion
 	
 	#region //Ataque
-	if keyboard_check_pressed(vk_rshift)
+	if keyboard_check_pressed(ord("Z"))
 	{
 		image_index = 0;
 		estado = scr_personagem_atacando;

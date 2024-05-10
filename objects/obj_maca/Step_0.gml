@@ -14,6 +14,8 @@ if place_meeting(x, y, obj_parede)
 
 #region //Direita ou Esquerda
 //Direita
+if (die != true)
+{
 if direc == 0 
 {
 	sprite_index = spr_maca_andando
@@ -25,9 +27,12 @@ else if direc == 1
 	sprite_index = spr_maca_andando_esq
 	 x -= vel;
 }
-#endregion
+
 
 if vida <=0 
 {
-	instance_destroy();
+	die = true;
+	sprite_index = spr_maca_die;
 }
+}
+#endregion

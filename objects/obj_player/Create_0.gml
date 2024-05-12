@@ -19,3 +19,5 @@ alarm[0] = 0;
 #endregion
 
 estado = scr_personagem_movendo;
+
+inv_tempo = 180;

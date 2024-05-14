@@ -1,1 +1,2 @@
-speed = 8;
+speed = 1;
+vida = 1;

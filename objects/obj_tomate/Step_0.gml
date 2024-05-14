@@ -1,4 +1,18 @@
-if vida <=0 
+event_inherited()
+
+if (die != true)
 {
-	instance_destroy();
+	if vida <=0 
+	{
+		if reset == false
+		{
+			image_index = 0;
+			reset = true;
+			
+		}
+		
+		die = true;
+		sprite_index = spr_tomate_die;
+	}
 }
+event_inherited()

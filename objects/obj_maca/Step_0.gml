@@ -1,3 +1,5 @@
+event_inherited();
+
 #region //Mudando a direção de movimentação
 if place_meeting(x, y, obj_parede)
 {

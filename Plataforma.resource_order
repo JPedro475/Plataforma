@@ -50,5 +50,6 @@
     {"name":"spr_vida","order":3,"path":"sprites/spr_vida/spr_vida.yy",},
     {"name":"Sprite21","order":1,"path":"sprites/Sprite21/Sprite21.yy",},
     {"name":"Sprite22","order":2,"path":"sprites/Sprite22/Sprite22.yy",},
+    {"name":"tiles_set","order":17,"path":"sprites/tiles_set/tiles_set.yy",},
   ],
 }

@@ -1,3 +1,4 @@
+if(global.pause)exit;
 if hit == true 
 {
 	vel = 0;

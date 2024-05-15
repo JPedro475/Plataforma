@@ -1,10 +1,10 @@
-if (file_exists("save.sav"))
+if (file_exists("save.ini"))file_delete("save.ini");
 {
-	file_delete("save.sav");
-	ini_open("save_sav");
-	ini_write_real("Jogador","x_atual",obj_player.x);
-	ini_write_real("Jogador","y_atual",obj_player.y);
-	ini_write_real("Jogador","vida_atual",obj_player.vida);
+	
+	ini_open("save_ini");
+	ini_write_real("Player","x_atual",obj_player.x);
+	ini_write_real("Player","y_atual",obj_player.y);
+	ini_write_real("Player","vida_atual",obj_player.vida);
 	ini_close();
 }
 

@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camera",
+  "%Name":"obj_vida",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camera",
+  "name":"obj_vida",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Controladores",
+    "path":"folders/Objetos/Controladores.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -11,8 +11,8 @@
   "name":"obj_save",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controladores",
-    "path":"folders/Objetos/Controladores.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

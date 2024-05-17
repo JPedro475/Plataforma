@@ -7,6 +7,8 @@ function scr_personagem_movendo(){
 
 	//Movimentação
 	velh = (dir - esq) * vel;
+	
+	
 
 	#region //Direção
 	if dir 
@@ -21,6 +23,7 @@ function scr_personagem_movendo(){
 	}
 	else
 	{
+		
 		if direc == 0
 		{
 			sprite_index = spr_player_idle;
@@ -33,16 +36,24 @@ function scr_personagem_movendo(){
 	#endregion
 
 	#region //Gravidade
-	if !place_meeting(x,y + 1, obj_chao)
+	if (!place_meeting(x,y + 1, obj_chao))
 	{
+		sprite_index = spr_player_jump;
 		velv += grav;
 	}
+	
 	else
 	{
-		if cima
+		if (cima)
 		{
 			velv =  -2.8;
 		}
+		/*else if (velv > 0)
+		{
+			image_index = 0;
+			sprite_index = spr_player_fall;
+		}*/
+		
 	}
 	#endregion
 
@@ -67,6 +78,7 @@ function scr_personagem_movendo(){
 		{
 			 y += sign(velv);
 		}
+		
 		velv = 0;
 	}
 

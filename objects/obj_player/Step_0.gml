@@ -8,6 +8,31 @@ if(global.pause)
 
 script_execute(estado);
 
+#region //Direção
+	if dir 
+	{
+		direc = 0;
+		sprite_index = spr_player_andando;
+	}
+	else if esq
+	{
+		direc = 1;
+		sprite_index = spr_player_andando_esq;
+	}
+	else
+	{
+		
+		if direc == 0
+		{
+			sprite_index = spr_player_idle;
+		}
+		else if  direc == 1 
+		{
+			sprite_index = spr_player_idle_esq;
+		}
+	}
+	#endregion
+
 #region //Combate
 if alarm[0] > 0
 {

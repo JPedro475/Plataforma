@@ -57,7 +57,6 @@
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_projetil","path":"objects/obj_projetil/obj_projetil.yy",},},
-    {"id":{"name":"obj_save","path":"objects/obj_save/obj_save.yy",},},
     {"id":{"name":"obj_tomate","path":"objects/obj_tomate/obj_tomate.yy",},},
     {"id":{"name":"Fase_1","path":"rooms/Fase_1/Fase_1.yy",},},
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
@@ -66,6 +65,7 @@
     {"id":{"name":"scr_personagem_movendo","path":"scripts/scr_personagem_movendo/scr_personagem_movendo.yy",},},
     {"id":{"name":"snd_enter","path":"sounds/snd_enter/snd_enter.yy",},},
     {"id":{"name":"snd_menu","path":"sounds/snd_menu/snd_menu.yy",},},
+    {"id":{"name":"snd_trilha","path":"sounds/snd_trilha/snd_trilha.yy",},},
     {"id":{"name":"spr_chao","path":"sprites/spr_chao/spr_chao.yy",},},
     {"id":{"name":"spr_dano_esq","path":"sprites/spr_dano_esq/spr_dano_esq.yy",},},
     {"id":{"name":"spr_dano","path":"sprites/spr_dano/spr_dano.yy",},},
@@ -99,8 +99,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
-    {"roomId":{"name":"Fase_1","path":"rooms/Fase_1/Fase_1.yy",},},
     {"roomId":{"name":"Opcoes","path":"rooms/Opcoes/Opcoes.yy",},},
+    {"roomId":{"name":"Fase_1","path":"rooms/Fase_1/Fase_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -24,6 +24,4 @@ for(var _i = 0; _i < op_max; _i++)
 	
 }
 
-
-
 draw_set_font(-1);

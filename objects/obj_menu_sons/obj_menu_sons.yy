@@ -12,8 +12,8 @@
   "name":"obj_menu_sons",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Controladores",
+    "path":"folders/Objetos/Controladores.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_parede",
+  "%Name":"obj_espinhos",
   "eventList":[],
   "managed":true,
-  "name":"obj_parede",
+  "name":"obj_espinhos",
   "overriddenProperties":[],
   "parent":{
-    "name":"Colisores",
-    "path":"folders/Objetos/Colisores.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_parede",
-    "path":"sprites/spr_parede/spr_parede.yy",
+    "name":"spr_espinhos",
+    "path":"sprites/spr_espinhos/spr_espinhos.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

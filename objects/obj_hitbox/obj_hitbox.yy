@@ -10,8 +10,8 @@
   "name":"obj_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Colisores",
+    "path":"folders/Objetos/Colisores.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -36,5 +36,5 @@
     "path":"sprites/spr_hitbox/spr_hitbox.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

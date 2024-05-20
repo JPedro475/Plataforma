@@ -8,6 +8,51 @@ function scr_personagem_movendo(){
 	//Movimentação
 	velh = (dir - esq) * vel;
 	
+	#region //Combate
+if alarm[0] > 0
+{
+	if image_alpha >= 1 
+	{
+		alfa_hit = -0.05;
+	}
+	else if image_alpha <= 0
+	{
+		alfa_hit = 0.05;
+	}
+	
+	image_alpha += alfa_hit;
+} 
+else 
+{
+	image_alpha = 1;
+}
+#endregion
+
+	#region //Direção
+if dir 
+{
+	direc = 0;
+	sprite_index = spr_player_andando;
+}
+else if esq
+{
+	direc = 1;
+	sprite_index = spr_player_andando_esq;
+}
+else
+{
+		
+if direc == 0
+{
+	sprite_index = spr_player_idle;
+}
+	else if  direc == 1 
+	{
+	sprite_index = spr_player_idle_esq;
+	}
+}
+	#endregion
+	
 	#region //Gravidade
 	if (!place_meeting(x,y + 1, obj_chao))
 	{
@@ -71,7 +116,7 @@ function scr_personagem_movendo(){
 		}
 		
 		//Esquerda
-		else if direc ==1 
+		else if direc == 1 
 		{
 			instance_create_layer(x - 20, y - 8,"Colisores", obj_hitbox);		
 		}

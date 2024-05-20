@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_parede",
+  "%Name":"obj_armadilha",
   "eventList":[],
   "managed":true,
-  "name":"obj_parede",
+  "name":"obj_armadilha",
   "overriddenProperties":[],
   "parent":{
     "name":"Colisores",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_parede",
-    "path":"sprites/spr_parede/spr_parede.yy",
+    "name":"spr_armadilha",
+    "path":"sprites/spr_armadilha/spr_armadilha.yy",
   },
   "spriteMaskId":null,
   "visible":false,

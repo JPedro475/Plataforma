@@ -1,4 +1,4 @@
-#region //Direcionais
+#region //global.direcionais
 dir = 0;
 esq = 0;
 cima = 0;

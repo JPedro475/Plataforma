@@ -18,6 +18,6 @@ alfa_hit = 0;
 alarm[0] = 0;
 #endregion
 
-estado = scr_personagem_movendo;
+estado = scr_inicializador;
 
 inv_tempo = 180;

@@ -39,8 +39,8 @@
     "path":"sprites/spr_player_idle/spr_player_idle.yy",
   },
   "spriteMaskId":{
-    "name":"spr_player_andando",
-    "path":"sprites/spr_player_andando/spr_player_andando.yy",
+    "name":"spr_player_idle",
+    "path":"sprites/spr_player_idle/spr_player_idle.yy",
   },
   "visible":true,
 }

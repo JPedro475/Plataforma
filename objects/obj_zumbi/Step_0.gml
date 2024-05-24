@@ -27,7 +27,6 @@ switch(estado)
 			timer_estado = 0;
 		}
 		scr_inimigo_ataque_melee(obj_player, detection, xscale);
-		
 		break;
 	}
 	#endregion
@@ -35,7 +34,6 @@ switch(estado)
 	#region Movendo
 	case "movendo":
 	{
-		
 		timer_estado++;
 		if (sprite_index != spr_zumbi_andando)
 		{
@@ -55,6 +53,11 @@ switch(estado)
 		break;
 	}
 	#endregion
+	
+	case "perseguindo":
+	{
+		
+	}
 	
 	#region Ataque
 	case "ataque":

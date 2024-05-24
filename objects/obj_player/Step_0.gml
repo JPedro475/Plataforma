@@ -211,31 +211,7 @@ switch(estado)
 	#region Defesa
 	/*case "defesa":
 	{
-		sprite_index = spr_player_defesa;
-		if (abs(velh) < .1)
-		{
-			estado = "parado";
-			velh = 0;
-		}
-		else if (_jump || velv != 0)
-		{
-			estado = "pulo";
-			velv = (-max_velv * _jump) ;
-			image_index = 0;
-		}
-		else if (_attack)
-		{
-			estado = "ataque";
-			velh = 0;
-			image_index = 0;
-		}
-		else if (_dash)
-		{
-			estado = "dash";
-			image_index = 0;
-		}
-		
-		break;	
+		break;
 	}
 		
 	}*/

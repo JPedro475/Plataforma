@@ -1,23 +1,25 @@
-#region //global.direcionais
-dir = 0;
-esq = 0;
-cima = 0;
-direc = 0;
-#endregion
+/// @description Inserir descrição aqui
+// Você pode escrever seu código neste editor
+randomize();
 
-#region //Fisica
-grav = 0.10;
-velv = 0;
-velh = 0;
-vel = 1;
-#endregion
 
-#region //Combate
-vida = 5;
-alfa_hit = 0;
-alarm[0] = 0;
-#endregion
+// Inherit the parent event
+event_inherited();
 
-estado = scr_inicializador;
+vida = 10;
+vida_atual = vida;
 
-inv_tempo = 180;
+max_velh = 4;
+max_velv = 6;
+massa = 1.2;
+dash_vel = 3;
+
+mostra_estado = true;
+
+combo = 0;
+dano = noone;
+ataque = 1;
+permitir_atk = true;
+ataque_multi = 1;
+buff = room_speed;
+

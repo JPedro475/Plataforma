@@ -4,13 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-vida = 3;
-vida_atual = vida;
-
-max_velh = 1;
-max_velv = 1;
-
-timer_estado = 0;
-
-detection = 50;
+draw_line(x, y-sprite_height/2.5, x + (detection * xscale), y - sprite_height/2.5)
 

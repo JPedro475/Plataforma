@@ -1,17 +1,17 @@
-#region //Fisica
-grav = 0.15;
-velv = 0;
+max_vida = 1;
+vida_atual = max_vida;
 velh = 0;
-vel = 1;
-vel_jump = 1;
-#endregion
+velv = 0;
 
-#region //Combate
-vida = 5;
-alfa_hit = 0;
-alarm[0] = 0;
-#endregion
+max_velh = 1;
+max_velv = 1;
 
-estado = scr_personagem_movendo;
+massa = 1;
+dano = 1;
 
-inv_tempo = 180;
+xscale = 1;
+
+mostra_estado = false;
+img_spd = 20
+
+estado = "parado";

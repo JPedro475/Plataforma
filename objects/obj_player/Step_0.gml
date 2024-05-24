@@ -207,20 +207,37 @@ switch(estado)
 }*/
 	#endregion
 	
-	#region Dash
-	case "dash":
+	#region Defesa
+	/*case "defesa":
 	{
-		sprite_index = spr_player_dash;
-		
-		//Velocidade
-		velh = image_xscale * dash_vel;
-		
-		//Saindo do estado
-		if (image_index >= image_number - 1)
+		sprite_index = spr_player_defesa;
+		if (abs(velh) < .1)
 		{
 			estado = "parado";
+			velh = 0;
 		}
-		break;
+		else if (_jump || velv != 0)
+		{
+			estado = "pulo";
+			velv = (-max_velv * _jump) ;
+			image_index = 0;
+		}
+		else if (_attack)
+		{
+			estado = "ataque";
+			velh = 0;
+			image_index = 0;
+		}
+		else if (_dash)
+		{
+			estado = "dash";
+			image_index = 0;
+		}
+		
+		break;	
 	}
+		
+	}*/
 	#endregion
+	
 }

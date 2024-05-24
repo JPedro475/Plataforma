@@ -44,7 +44,7 @@
     {"name":"spr_espinhos","order":18,"path":"sprites/spr_espinhos/spr_espinhos.yy",},
     {"name":"spr_hitbox","order":2,"path":"sprites/spr_hitbox/spr_hitbox.yy",},
     {"name":"spr_parede","order":1,"path":"sprites/spr_parede/spr_parede.yy",},
-    {"name":"spr_player_dash","order":15,"path":"sprites/spr_player_dash/spr_player_dash.yy",},
+    {"name":"spr_player_defesa","order":15,"path":"sprites/spr_player_defesa/spr_player_defesa.yy",},
     {"name":"spr_player_jump","order":2,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"spr_tomate_atacando","order":1,"path":"sprites/spr_tomate_atacando/spr_tomate_atacando.yy",},
     {"name":"spr_tomate_die","order":2,"path":"sprites/spr_tomate_die/spr_tomate_die.yy",},

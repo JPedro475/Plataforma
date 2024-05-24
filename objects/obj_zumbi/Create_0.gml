@@ -12,5 +12,5 @@ max_velv = 1;
 
 timer_estado = 0;
 
-detection = 50;
+detection = 35;
 

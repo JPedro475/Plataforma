@@ -75,7 +75,7 @@ switch(estado)
 	#endregion
 	
 	#region Hit
-	/*case "hit":
+	case "hit":
 	{
 		if (sprite_index != spr_zumbi_hit)
 		{
@@ -99,7 +99,7 @@ switch(estado)
 			}
 		}
 		break;
-	}*/
+	}
 	#endregion
 	
 	#region Dead

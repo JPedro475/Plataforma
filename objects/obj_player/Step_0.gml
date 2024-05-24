@@ -1,11 +1,3 @@
-if(global.pause)
-{
-	image_speed = 0;
-	exit;
-}else{
-	image_speed = 1;
-}
-
 //Variaveis
 var _right, _left, _jump, _attack, _dash;
 var _chao = place_meeting(x, y + 1, obj_chao)

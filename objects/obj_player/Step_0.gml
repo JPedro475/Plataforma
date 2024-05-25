@@ -1,20 +1,12 @@
-if(global.pause)
-{
-	image_speed = 0;
-	exit;
-}else{
-	image_speed = 1;
-}
-
 //Variaveis
-var _right, _left, _jump, _attack, _dash;
+var _right, _left, _jump, _attack, _defesa;
 var _chao = place_meeting(x, y + 1, obj_chao)
 
 _right = keyboard_check(vk_right);
 _left = keyboard_check(vk_left);
 _jump = keyboard_check_pressed(vk_space);
 _attack = keyboard_check_pressed(ord("Z"));
-_dash = keyboard_check_pressed(ord("X"));
+_defesa = keyboard_check_pressed(ord("X"));
 
 if (buff > 0) buff -= 1;
 
@@ -47,7 +39,7 @@ switch(estado)
 		else if (_jump || velv != 0)
 		{
 			estado = "pulo";
-			velv = (-max_velv * _jump) ;
+			velv = (-max_velv * _jump);
 			image_index = 0;
 		}
 		
@@ -58,11 +50,11 @@ switch(estado)
 			image_index = 0;
 		}
 		
-		else if (_dash) 
+		/*else if (_dash) 
 		{
 			estado = "dash";
 			image_index = 0;
-		}
+		}*/
 		
 		break;
 	}
@@ -94,11 +86,11 @@ switch(estado)
 			velh = 0;
 			image_index = 0;
 		}
-		else if (_dash)
+		/*else if (_dash)
 		{
 			estado = "dash";
 			image_index = 0;
-		}
+		}*/
 		
 		break;	
 	}
@@ -107,6 +99,8 @@ switch(estado)
 	#region Pulo
 	case "pulo":
 	{
+		//Mover enquanto pula
+		velh = (_right - _left) * max_velh;
 		//Queda
 		if (velv > 0)
 		{
@@ -117,7 +111,6 @@ switch(estado)
 			sprite_index = spr_player_jump;
 			
 		}
-		
 		
 		if (_chao)
 		{
@@ -215,20 +208,71 @@ switch(estado)
 }*/
 	#endregion
 	
-	#region Dash
-	case "dash":
+	#region Defesa
+	/*case "defesa":
 	{
-		sprite_index = spr_player_dash;
+		break;
+	}
 		
-		//Velocidade
-		velh = image_xscale * dash_vel;
+	}*/
+	#endregion
+	
+	#region Hit
+	case "hit":
+	{
+		if(sprite_index != spr_player_hurt)
+		{
+			sprite_index = spr_player_hurt;
+			image_index = 0;
+		}
 		
-		//Saindo do estado
-		if (image_index >= image_number - 1)
+		//Ficando parado apos hit
+		velh = 0;
+		
+		//Checando se dve morrer
+		if (vida_atual > 0)
+		{
+			if(image_index >= image_number - 1)
+			{
+				estado = "parado";
+			}
+		}
+		else
+		{
+			if(image_index >= image_number - 1)
+			{
+				estado = "morto";
+			}
+		}
+		
+		if(image_index >= image_number - 1)
 		{
 			estado = "parado";
 		}
 		break;
 	}
 	#endregion
+	
+	case "morto":
+	{
+		velh=0
+		if(sprite_index != spr_player_dead)
+		{
+			image_index = 0;
+			sprite_index = spr_player_dead;
+		}
+		
+		if (image_index >= image_number -1)
+		{
+			image_index = image_number -1;
+		}
+		break;
+	}
+	
+	//Estado default
+	default:
+	{
+		estado = "parado";
+	}
+	
 }

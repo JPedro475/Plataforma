@@ -6,7 +6,7 @@ randomize();
 // Inherit the parent event
 event_inherited();
 
-vida = 10;
+vida = 5;
 vida_atual = vida;
 
 max_velh = 4;

@@ -9,6 +9,7 @@ if (!_chao)
 
 switch(estado)
 {
+	#region Parado
 	case "parado":
 	{
 		velh = 0;
@@ -29,7 +30,9 @@ switch(estado)
 		
 		break;
 	}
+	#endregion
 	
+	#region Movendo
 	case "movendo":
 	{
 		
@@ -51,13 +54,17 @@ switch(estado)
 		
 		break;
 	}
+	#endregion
 	
+	#region Ataque
 	case "ataque":
 	{
 		velh = 0;
 		if(sprite_index != spr_zumbi_ataque)
 		{
 			image_index = 0;
+			permitir_atk = true;
+			dano = noone;
 		}
 		sprite_index = spr_zumbi_ataque;
 		if (image_index > image_number -1)
@@ -65,13 +72,25 @@ switch(estado)
 			estado = "parado";
 		}
 		
-		//Condição de saida do estado
-		
-		
+		//Criando o dano
+		if(image_index >= 3 && dano == noone && image_index < 4 && permitir_atk)
+		{
+			dano = instance_create_layer(x + sprite_width/2, y - sprite_height/2, layer, obj_hitbox)
+			dano.dano = ataque;
+			dano.pai = id;
+			permitir_atk = false;
+		}
+		//Apgando o dano
+		if(dano != noone && image_index >= 4)
+		{
+			instance_destroy(dano);
+			dano = noone;
+		}
 		break;
 	}
+	#endregion
 	
-	/*case "hit":
+	case "hit":
 	{
 		if (sprite_index != spr_zumbi_hit)
 		{
@@ -95,10 +114,11 @@ switch(estado)
 			}
 		}
 		break;
-	}*/
+	}
 	
 	case "dead":
 	{
+		velh=0
 		if (sprite_index != spr_zumbi_die)
 		{
 			image_index = 0;

@@ -1,3 +1,11 @@
+if(global.pause)
+{
+	image_speed = 0;
+	exit;
+}else{
+	image_speed = 1;
+}
+
 //Colisão e movimentação
 var _velh = sign(velh);
 var _velv = sign(velv);

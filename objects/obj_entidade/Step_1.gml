@@ -1,3 +1,11 @@
+if(global.pause)
+{
+	image_speed = 0;
+	exit;
+}else{
+	image_speed = 1;
+}
+
 //Olhando para direção certa
 if (velh != 0 ) xscale = sign(velh)
 image_xscale = xscale

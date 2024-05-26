@@ -8,6 +8,14 @@ for (var _i = 0; _i < _qntd; _i++)
 {
 	var _atual = _lista[| _i];
 	
+	
+	//Checando se o objeto esta invencivel
+	
+	if(_atual.invencivel)
+	{
+		continue;
+	}
+	
 	if(object_get_parent(_atual.object_index) != object_get_parent(pai.object_index))
 	{
 		//Checa SE puder da dano no objeto
@@ -44,7 +52,7 @@ for (var _i = 0; _i < _tam; _i++)
 			screenshake(2);
 		}
 	}
-		if (_outro.estado !="defesa")
+		/*if (_outro.estado !="defesa")
 		{
 			_outro = aplicar_dano[| _i].id;
 			
@@ -59,7 +67,7 @@ for (var _i = 0; _i < _tam; _i++)
 					screenshake(2);
 				}
 			}
-		}
+		}*/
 
 }
 instance_destroy();

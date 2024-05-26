@@ -1,3 +1,5 @@
+invencivel = false;
+
 max_vida = 1;
 vida_atual = max_vida;
 velh = 0;

@@ -1,3 +1,21 @@
+//Checando o obj_transicao
+if(instance_exists(obj_transicao)) exit;
+
+
+//Invencibilidade
+if (invencivel && tempo_invencivel >0)
+{
+	tempo_invencivel--;
+	//Alterar o valor entre 1 e -1
+	image_alpha = max(sin(get_timer()/100000), 0.2);
+}
+else
+{
+	invencivel = false;
+	image_alpha = 1;
+}
+
+
 //Variaveis
 var _right, _left, _jump, _attack, _defesa;
 var _chao = place_meeting(x, y + 1, obj_chao)
@@ -10,6 +28,8 @@ _defesa = keyboard_check(ord("X"));
 
 if (buff > 0) buff -= 1;
 
+//Movimentação
+	velh = (_right - _left) * max_velh * global.vel_multi;
 
 //Gravidade
 if (!_chao)
@@ -32,7 +52,7 @@ switch(estado)
 		
 		//Condição de troca de Estado
 		//Movendo
-		if (_right || _left)
+		if (velh != 0)
 		{
 			estado = "movendo";
 		}
@@ -65,9 +85,6 @@ switch(estado)
 	case "movendo":
 	{
 		sprite_index = spr_player_andando;
-		
-		//Movimentação
-		velh = (_right - _left) * max_velh * global.vel_multi;
 		
 		//Parado
 		if (abs(velh) < .1)
@@ -210,8 +227,8 @@ switch(estado)
 }
 	#endregion
 	
-	#region Defesa
-	case "defesa":
+ 	#region Defesa
+	/*case "defesa":
 	{
 		sprite_index = spr_player_defesa;
 		
@@ -222,7 +239,7 @@ switch(estado)
 			velh = 0;
 		}
 		break;
-	}
+	}*/
 	
 	#endregion
 	
@@ -236,6 +253,10 @@ switch(estado)
 			
 			//Screenshake
 			screenshake(3);
+			
+			//invencivel
+			invencivel = true;
+			tempo_invencivel = invencivel_timer;
 		}
 		
 		//Reduz a vida do jogador

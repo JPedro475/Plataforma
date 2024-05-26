@@ -23,3 +23,6 @@ permitir_atk = true;
 ataque_multi = 1;
 buff = room_speed;
 
+invencivel = false;
+invencivel_timer = room_speed * 3;
+tempo_invencivel = invencivel_timer;

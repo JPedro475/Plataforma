@@ -55,11 +55,15 @@
     {"id":{"name":"obj_hitbox","path":"objects/obj_hitbox/obj_hitbox.yy",},},
     {"id":{"name":"obj_hud","path":"objects/obj_hud/obj_hud.yy",},},
     {"id":{"name":"obj_inimigo_pai","path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",},},
+    {"id":{"name":"obj_jogo_controle","path":"objects/obj_jogo_controle/obj_jogo_controle.yy",},},
     {"id":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_screen_shake","path":"objects/obj_screen_shake/obj_screen_shake.yy",},},
     {"id":{"name":"obj_zumbi","path":"objects/obj_zumbi/obj_zumbi.yy",},},
     {"id":{"name":"rm_fase_1","path":"rooms/rm_fase_1/rm_fase_1.yy",},},
+    {"id":{"name":"rm_initi","path":"rooms/rm_initi/rm_initi.yy",},},
+    {"id":{"name":"scr_funcs","path":"scripts/scr_funcs/scr_funcs.yy",},},
     {"id":{"name":"scr_ini","path":"scripts/scr_ini/scr_ini.yy",},},
     {"id":{"name":"scr_inimigo_ataque_melee","path":"scripts/scr_inimigo_ataque_melee/scr_inimigo_ataque_melee.yy",},},
     {"id":{"name":"snd_enter","path":"sounds/snd_enter/snd_enter.yy",},},
@@ -97,6 +101,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_fase_1","path":"rooms/rm_fase_1/rm_fase_1.yy",},},
+    {"roomId":{"name":"rm_initi","path":"rooms/rm_initi/rm_initi.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

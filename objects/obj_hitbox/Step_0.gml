@@ -36,29 +36,31 @@ for (var _i = 0; _i < _tam; _i++)
 		_outro.estado = "hit";
 		_outro.image_index = 0;
 		_outro.vida_atual -= dano;
+		
+		//Check do hitbox
+		if(object_get_parent(_outro.object_index) == obj_inimigo_pai)
+		{
+			//Screenshake no inimigo
+			screenshake(2);
+		}
 	}
-}
-instance_destroy();
-
-
-/*//Se estiver tocando no inimigo
-if (_outro)
-{
-	//Não está tocando no "pai"
-	if(_outro.id != pai)
-	{
-		//Check do pai
-		var _papi = object_get_parent(_outro.object_index)
-		if(_papi != object_get_parent(pai.object_index))
-		{	
+		if (_outro.estado !="defesa")
+		{
+			_outro = aplicar_dano[| _i].id;
 			
 			if(_outro.vida_atual > 0)
 			{
 				_outro.estado = "hit";
 				_outro.image_index = 0;
 				_outro.vida_atual -= dano;
-				instance_destroy();
+				
+				if (object_get_parent(_outro.object_index) == obj_inimigo_pai)
+				{
+					screenshake(2);
+				}
 			}
 		}
-	}
-}*/
+
+}
+instance_destroy();
+

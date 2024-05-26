@@ -6,7 +6,7 @@ _right = keyboard_check(vk_right);
 _left = keyboard_check(vk_left);
 _jump = keyboard_check_pressed(vk_space);
 _attack = keyboard_check_pressed(ord("Z"));
-_defesa = keyboard_check_pressed(ord("X"));
+_defesa = keyboard_check(ord("X"));
 
 if (buff > 0) buff -= 1;
 
@@ -16,7 +16,7 @@ if (!_chao)
 {
 	if (velv < max_velv * 2)
 	{
-	velv += GRAVIDADE * massa;
+	velv += GRAVIDADE * massa * global.vel_multi;
 	}
 }
 
@@ -50,11 +50,12 @@ switch(estado)
 			image_index = 0;
 		}
 		
-		/*else if (_dash) 
+		else if (_defesa) 
 		{
-			estado = "dash";
+			estado = "defesa";
+			velh = 0;
 			image_index = 0;
-		}*/
+		}
 		
 		break;
 	}
@@ -66,7 +67,7 @@ switch(estado)
 		sprite_index = spr_player_andando;
 		
 		//Movimentação
-		velh = (_right - _left) * max_velh;
+		velh = (_right - _left) * max_velh * global.vel_multi;
 		
 		//Parado
 		if (abs(velh) < .1)
@@ -86,11 +87,12 @@ switch(estado)
 			velh = 0;
 			image_index = 0;
 		}
-		/*else if (_dash)
+		else if (_defesa)
 		{
-			estado = "dash";
+			estado = "defesa";
+			velh = 0;
 			image_index = 0;
-		}*/
+		}
 		
 		break;	
 	}
@@ -122,7 +124,7 @@ switch(estado)
 	#endregion
 	
 	#region Ataque
-	/*case "ataque":
+	case "ataque":
 {
 		velh = 0;
 		
@@ -187,9 +189,9 @@ switch(estado)
 				instance_destroy(dano, false);
 				dano = noone;
 			}
-			if (_dash)
+			if (_defesa)
 			{
-				estado = "dash";
+				estado = "defesa";
 				image_index = 0;
 				combo = 0;
 				if (dano)
@@ -205,16 +207,23 @@ switch(estado)
 		}
 	}
 		break;
-}*/
+}
 	#endregion
 	
 	#region Defesa
-	/*case "defesa":
+	case "defesa":
 	{
+		sprite_index = spr_player_defesa;
+		
+		//Saindo do estado
+		 if (image_index >= image_index)
+		{
+			estado = "parado"
+			velh = 0;
+		}
 		break;
 	}
-		
-	}*/
+	
 	#endregion
 	
 	#region Hit
@@ -224,6 +233,15 @@ switch(estado)
 		{
 			sprite_index = spr_player_hurt;
 			image_index = 0;
+			
+			//Screenshake
+			screenshake(3);
+		}
+		
+		//Reduz a vida do jogador
+		if (estado != "defesa")
+		{
+		obj_player.vida -= 1;
 		}
 		
 		//Ficando parado apos hit
@@ -253,8 +271,18 @@ switch(estado)
 	}
 	#endregion
 	
+	#region Morto
 	case "morto":
 	{
+		//Check do controle
+		if(instance_exists(obj_jogo_controle))
+		{
+			with(obj_jogo_controle)
+			{
+				game_over = true;
+			}
+		}
+		
 		velh=0
 		if(sprite_index != spr_player_dead)
 		{
@@ -268,6 +296,7 @@ switch(estado)
 		}
 		break;
 	}
+	#endregion
 	
 	//Estado default
 	default:
@@ -276,3 +305,5 @@ switch(estado)
 	}
 	
 }
+
+if(keyboard_check(vk_enter)) game_restart();

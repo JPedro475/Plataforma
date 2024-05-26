@@ -1,5 +1,5 @@
 var _sprl = sprite_get_width(spr_vida);
-var _buffer = 20;
+var _buffer = 25;
 var _vidas = obj_player.vida;
 
 for (var i = 0; i < _vidas; i++;)

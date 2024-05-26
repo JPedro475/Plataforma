@@ -2,7 +2,7 @@ var _chao = place_meeting(x, y + 1, obj_chao);
 
 if (!_chao)
 {
-	velv += GRAVIDADE * massa
+	velv += GRAVIDADE * massa * global.vel_multi;
 }
 
 

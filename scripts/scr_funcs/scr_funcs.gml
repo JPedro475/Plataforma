@@ -4,6 +4,21 @@ function scr_funcs(){
 
 }
 
+//Enum para definir as ações
+enum MENU_ACOES
+{
+	RODA_METODO,
+	CARREGA_MENU
+}
+
+enum MENU_LISTA
+{
+	PRINCIPAL,
+	OPCOES,
+	CREDITOS
+}
+
+
 //Screenshake
 ///@function screenshake(valor_do_tremor)
 ///@arg intensidade
@@ -21,7 +36,7 @@ function define_align(_ver, _hor)
 }
 
 //Valor da animação
-///@function valor_ac(animation_curve, anima, [canal])
+/*///@function valor_ac(animation_curve, anima, [canal])
 function valor_ac(_anim, _animar = false, _channel = 0)
 {
 	//Posição da animação
@@ -37,7 +52,5 @@ function valor_ac(_anim, _animar = false, _channel = 0)
 	var _canal = animcurve_get_channel(_anim, _channel);
 	_val = animcurve_channel_evaluate(_canal, _pos);
 	
-	show_debug_message(_val)
-	
 	return _val;
-}
+}*/

@@ -32,6 +32,7 @@
     {"name":"obj_button_esq","order":1,"path":"objects/obj_button_esq/obj_button_esq.yy",},
     {"name":"obj_button_up","order":2,"path":"objects/obj_button_up/obj_button_up.yy",},
     {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
+    {"name":"obj_control","order":8,"path":"objects/obj_control/obj_control.yy",},
     {"name":"obj_entidade","order":3,"path":"objects/obj_entidade/obj_entidade.yy",},
     {"name":"obj_espinhos","order":17,"path":"objects/obj_espinhos/obj_espinhos.yy",},
     {"name":"obj_hitbox","order":2,"path":"objects/obj_hitbox/obj_hitbox.yy",},

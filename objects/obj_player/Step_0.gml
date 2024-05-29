@@ -27,8 +27,9 @@ left = keyboard_check(vk_left) or keyboard_check_direct(ord("A"));
 jump = keyboard_check_pressed(vk_space) or keyboard_check_direct(ord("W"));
 attack = keyboard_check_pressed(ord("Z")) or keyboard_check_direct(ord("J"));
 defesa = keyboard_check(ord("X")) or keyboard_check_direct(ord("K"));
-
 velh = (right - left) * max_velh * global.vel_multi;
+
+
 //Gravidade
 if (!_chao)
 {
@@ -46,7 +47,6 @@ switch(estado)
 	{
 		//comportamento do estado
 		sprite_index = spr_player_idle;
-		
 		
 		//Condição de troca de Estado
 		//Movendo

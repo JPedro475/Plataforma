@@ -5,8 +5,6 @@ randomize();
 
 // Inherit the parent event
 event_inherited();
-
-
 //Movimento e mecanicas
 
 

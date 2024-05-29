@@ -61,6 +61,7 @@
     {"id":{"name":"obj_hud","path":"objects/obj_hud/obj_hud.yy",},},
     {"id":{"name":"obj_inimigo_pai","path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",},},
     {"id":{"name":"obj_jogo_controle","path":"objects/obj_jogo_controle/obj_jogo_controle.yy",},},
+    {"id":{"name":"obj_menu_op","path":"objects/obj_menu_op/obj_menu_op.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
@@ -72,6 +73,7 @@
     {"id":{"name":"rm_chefe","path":"rooms/rm_chefe/rm_chefe.yy",},},
     {"id":{"name":"rm_fase_1","path":"rooms/rm_fase_1/rm_fase_1.yy",},},
     {"id":{"name":"rm_initi","path":"rooms/rm_initi/rm_initi.yy",},},
+    {"id":{"name":"rm_menu_op","path":"rooms/rm_menu_op/rm_menu_op.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"scr_funcs","path":"scripts/scr_funcs/scr_funcs.yy",},},
     {"id":{"name":"scr_ini","path":"scripts/scr_ini/scr_ini.yy",},},
@@ -118,6 +120,7 @@
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_fase_1","path":"rooms/rm_fase_1/rm_fase_1.yy",},},
     {"roomId":{"name":"rm_chefe","path":"rooms/rm_chefe/rm_chefe.yy",},},
+    {"roomId":{"name":"rm_menu_op","path":"rooms/rm_menu_op/rm_menu_op.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

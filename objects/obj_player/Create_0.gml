@@ -6,6 +6,10 @@ randomize();
 // Inherit the parent event
 event_inherited();
 
+
+//Movimento e mecanicas
+
+
 vida = 5;
 vida_atual = vida;
 

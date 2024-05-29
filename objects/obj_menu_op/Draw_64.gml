@@ -23,22 +23,19 @@ for( var _i = 0; _i < op_tamanho; _i++)
 		index = _i;
 		if(mouse_check_button_pressed(mb_left))
 		{
-			if (index == 0)
+			/*if (index == 0)
 			{
 				room_goto(rm_fase_1);
 			}
 			else if (index == 1)
 			{
-				room_goto(rm_menu_op);
-			}
-			/*else if (index == 2)
-			{
 				
 			}*/
-			else if(index == 3)
+			if (index == 2)
 			{
-				game_end();
+				room_goto(rm_menu);
 			}
+			
 		}
 	}
 	else

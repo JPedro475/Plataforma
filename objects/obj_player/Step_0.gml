@@ -17,20 +17,18 @@ else
 
 
 //Variaveis
-var _right, _left, _jump, _attack, _defesa;
 var _chao = place_meeting(x, y + 1, obj_chao)
-
-_right = keyboard_check(vk_right);
-_left = keyboard_check(vk_left);
-_jump = keyboard_check_pressed(vk_space);
-_attack = keyboard_check_pressed(ord("Z"));
-_defesa = keyboard_check(ord("X"));
 
 if (buff > 0) buff -= 1;
 
 //Movimentação
-	velh = (_right - _left) * max_velh * global.vel_multi;
+right = keyboard_check(vk_right) or keyboard_check_direct(ord("D"));
+left = keyboard_check(vk_left) or keyboard_check_direct(ord("A"));
+jump = keyboard_check_pressed(vk_space) or keyboard_check_direct(ord("W"));
+attack = keyboard_check_pressed(ord("Z")) or keyboard_check_direct(ord("J"));
+defesa = keyboard_check(ord("X")) or keyboard_check_direct(ord("K"));
 
+velh = (right - left) * max_velh * global.vel_multi;
 //Gravidade
 if (!_chao)
 {
@@ -56,21 +54,21 @@ switch(estado)
 		{
 			estado = "movendo";
 		}
-		else if (_jump || velv != 0)
+		else if (jump || velv != 0)
 		{
 			estado = "pulo";
-			velv = (-max_velv * _jump);
+			velv = (-max_velv * jump);
 			image_index = 0;
 		}
 		
-		else if (_attack)
+		else if (attack)
 		{
 			estado = "ataque"
 			velh = 0;
 			image_index = 0;
 		}
 		
-		else if (_defesa) 
+		else if (defesa) 
 		{
 			estado = "defesa";
 			velh = 0;
@@ -92,19 +90,19 @@ switch(estado)
 			estado = "parado";
 			velh = 0;
 		}
-		else if (_jump || velv != 0)
+		else if (jump || velv != 0)
 		{
 			estado = "pulo";
-			velv = (-max_velv * _jump) ;
+			velv = (-max_velv * jump) ;
 			image_index = 0;
 		}
-		else if (_attack)
+		else if (attack)
 		{
 			estado = "ataque";
 			velh = 0;
 			image_index = 0;
 		}
-		else if (_defesa)
+		else if (defesa)
 		{
 			estado = "defesa";
 			velh = 0;
@@ -119,7 +117,7 @@ switch(estado)
 	case "pulo":
 	{
 		//Mover enquanto pula
-		velh = (_right - _left) * max_velh;
+		velh = (right - left) * max_velh;
 		//Queda
 		if (velv > 0)
 		{
@@ -206,7 +204,7 @@ switch(estado)
 				instance_destroy(dano, false);
 				dano = noone;
 			}
-			if (_defesa)
+			if (defesa)
 			{
 				estado = "defesa";
 				image_index = 0;

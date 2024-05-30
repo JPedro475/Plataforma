@@ -22,11 +22,12 @@ var _chao = place_meeting(x, y + 1, obj_chao)
 if (buff > 0) buff -= 1;
 
 //Movimentação
-right = keyboard_check(vk_right) or keyboard_check_direct(ord("D"));
-left = keyboard_check(vk_left) or keyboard_check_direct(ord("A"));
+right = keyboard_check(vk_right) or mouse_check_button(mb_left);
+left = keyboard_check(vk_left) or mouse_check_button(mb_left);
 jump = keyboard_check_pressed(vk_space) or keyboard_check_direct(ord("W"));
 attack = keyboard_check_pressed(ord("Z")) or keyboard_check_direct(ord("J"));
 defesa = keyboard_check(ord("X")) or keyboard_check_direct(ord("K"));
+
 velh = (right - left) * max_velh * global.vel_multi;
 
 
@@ -142,8 +143,6 @@ switch(estado)
 	case "ataque":
 {
 		velh = 0;
-		
-		
 		if (combo == 0)
 		{
 			sprite_index = spr_player_attack;
@@ -161,7 +160,7 @@ switch(estado)
 		//Hitbox
 		if (image_index >= 2 && dano == noone && permitir_atk)
 		{
-			dano = instance_create_layer(x + sprite_width/2, y - sprite_height/2, obj_hitbox);
+			dano = instance_create_layer(x + sprite_width/2, y - sprite_height/2, layer, obj_hitbox);
 			dano.dano = ataque * ataque_multi;
 			dano.pai = id;
 			permitir_atk = false;
@@ -174,7 +173,7 @@ switch(estado)
 			buff = room_speed;
 		}
 		
-		if (buff && combo < 2 && image_index >= image_number - 1)
+		if (buff && combo < 2 && image_index >= image_number - 2)
 		{
 			combo++; 
 			image_index = 0;
@@ -187,35 +186,24 @@ switch(estado)
 			}
 			
 			//Zerar o buff
-			
 			buff = 0;
 		}
 		
 		
 		if (image_index > image_number - 1)
-		{
+	{
 			estado = "parado";
 			velh = 0;
 			combo = 0;
 			permitir_atk = true;
 			ataque_multi = 1;
-			if (dano)
-			{
-				instance_destroy(dano, false);
-				dano = noone;
-			}
-			if (defesa)
-			{
-				estado = "defesa";
-				image_index = 0;
-				combo = 0;
-				if (dano)
-				{
-					instance_destroy(dano, false);
-					dano = noone;
-				}
-			}
-			if (velv != 0)
+		if (dano)
+		{
+			instance_destroy(dano, false);
+			dano = noone;
+		}
+		
+		if (velv != 0)
 		{
 			estado = "pulo";
 			image_index = 0;
@@ -319,10 +307,11 @@ switch(estado)
 	
 	//Estado default
 	default:
-	{
 		estado = "parado";
 	}
 	
-}
 
+
+
+//Reinicia o jogo
 if(keyboard_check(vk_enter)) game_restart();

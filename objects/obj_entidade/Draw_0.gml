@@ -1,5 +1,5 @@
 draw_self();
-
+/*
 if (mostra_estado) 
 {
 draw_set_valign(fa_middle);

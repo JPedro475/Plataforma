@@ -16,8 +16,8 @@ max_velv = 6;
 massa = 1.2;
 
 
-mostra_estado = true;
-
+//mostra_estado = true;
+//Combo // Ataque
 combo = 0;
 dano = noone;
 ataque = 1;
@@ -25,6 +25,7 @@ permitir_atk = true;
 ataque_multi = 1;
 buff = room_speed;
 
+//Invencibilidade
 invencivel = false;
 invencivel_timer = room_speed * 3;
 tempo_invencivel = invencivel_timer;

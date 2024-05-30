@@ -25,6 +25,7 @@
     {"name":"Dano","order":16,"path":"folders/Sprites/Player/Dano.yy",},
     {"name":"Idle","order":7,"path":"folders/Sprites/Player/Idle.yy",},
     {"name":"Pulo","order":14,"path":"folders/Sprites/Player/Pulo.yy",},
+    {"name":"Tiles","order":23,"path":"folders/Sprites/Tiles.yy",},
     {"name":"Tomate","order":15,"path":"folders/Sprites/Tomate.yy",},
     {"name":"Zumbi","order":11,"path":"folders/Sprites/Zumbi.yy",},
   ],
@@ -64,6 +65,7 @@
     {"name":"spr_espinhos","order":18,"path":"sprites/spr_espinhos/spr_espinhos.yy",},
     {"name":"spr_hitbox","order":2,"path":"sprites/spr_hitbox/spr_hitbox.yy",},
     {"name":"spr_parede","order":1,"path":"sprites/spr_parede/spr_parede.yy",},
+    {"name":"spr_player_attack_1","order":1,"path":"sprites/spr_player_attack_1/spr_player_attack_1.yy",},
     {"name":"spr_player_dead","order":17,"path":"sprites/spr_player_dead/spr_player_dead.yy",},
     {"name":"spr_player_defesa","order":15,"path":"sprites/spr_player_defesa/spr_player_defesa.yy",},
     {"name":"spr_player_jump","order":2,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
@@ -78,5 +80,7 @@
     {"name":"Sprite21","order":1,"path":"sprites/Sprite21/Sprite21.yy",},
     {"name":"Sprite22","order":2,"path":"sprites/Sprite22/Sprite22.yy",},
     {"name":"tiles_set","order":17,"path":"sprites/tiles_set/tiles_set.yy",},
+    {"name":"tiles","order":24,"path":"sprites/tiles/tiles.yy",},
+    {"name":"TileSet2","order":1,"path":"tilesets/TileSet2/TileSet2.yy",},
   ],
 }

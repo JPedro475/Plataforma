@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_button_dir",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_button_dir",
   "overriddenProperties":[],

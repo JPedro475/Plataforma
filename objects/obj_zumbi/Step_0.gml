@@ -90,6 +90,7 @@ switch(estado)
 	}
 	#endregion
 	
+	#region Hit
 	case "hit":
 	{
 		if (sprite_index != spr_zumbi_hit)
@@ -115,7 +116,9 @@ switch(estado)
 		}
 		break;
 	}
+	#endregion
 	
+	#region Dead
 	case "dead":
 	{
 		velh=0
@@ -132,5 +135,7 @@ switch(estado)
 			
 			if (image_alpha <=0) instance_destroy();
 		}
+		break;
 	}
+	#endregion
 }

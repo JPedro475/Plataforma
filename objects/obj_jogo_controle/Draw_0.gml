@@ -1,5 +1,4 @@
 //Tela de game over
-
 if(game_over)
 {
 	//Posição da camera

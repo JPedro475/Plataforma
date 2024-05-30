@@ -53,6 +53,5 @@ for (var _i = 0; _i < _tam; _i++)
 
 ds_list_destroy(aplicar_dano);
 ds_list_destroy(_lista);
-
 instance_destroy();
 

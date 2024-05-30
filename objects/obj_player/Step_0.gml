@@ -22,8 +22,8 @@ var _chao = place_meeting(x, y + 1, obj_chao)
 if (buff > 0) buff -= 1;
 
 //Movimentação
-right = keyboard_check(vk_right) or mouse_check_button(mb_left);
-left = keyboard_check(vk_left) or mouse_check_button(mb_left);
+right = keyboard_check(vk_right)
+left = keyboard_check(vk_left)
 jump = keyboard_check_pressed(vk_space) or keyboard_check_direct(ord("W"));
 attack = keyboard_check_pressed(ord("Z")) or keyboard_check_direct(ord("J"));
 defesa = keyboard_check(ord("X")) or keyboard_check_direct(ord("K"));
@@ -68,14 +68,7 @@ switch(estado)
 			velh = 0;
 			image_index = 0;
 		}
-		
-		else if (defesa) 
-		{
-			estado = "defesa";
-			velh = 0;
-			image_index = 0;
-		}
-		
+
 		break;
 	}
 	#endregion
@@ -103,13 +96,7 @@ switch(estado)
 			velh = 0;
 			image_index = 0;
 		}
-		else if (defesa)
-		{
-			estado = "defesa";
-			velh = 0;
-			image_index = 0;
-		}
-		
+	
 		break;	
 	}
 	#endregion
@@ -143,22 +130,18 @@ switch(estado)
 	case "ataque":
 {
 		velh = 0;
-		if (combo == 0)
+		
+		if(combo == 0)
 		{
-			sprite_index = spr_player_attack;
+			sprite_index = spr_player_attack
 		}
 		else if (combo == 1)
 		{
 			sprite_index = spr_player_attack_1;
-			
-		}
-		else if (combo == 2)
-		{
-			sprite_index = spr_player_attack_2;
 		}
 		
 		//Hitbox
-		if (image_index >= 2 && dano == noone && permitir_atk)
+		if(image_index  >= 1 && dano == noone && permitir_atk)
 		{
 			dano = instance_create_layer(x + sprite_width/2, y - sprite_height/2, layer, obj_hitbox);
 			dano.dano = ataque * ataque_multi;
@@ -166,72 +149,44 @@ switch(estado)
 			permitir_atk = false;
 		}
 		
-		//Configuração do buff
-		
-		if (attack && combo < 2)
+		if(attack && combo < 1 && image_index >= image_number - 1)
 		{
-			buff = room_speed;
-		}
-		
-		if (buff && combo < 2 && image_index >= image_number - 2)
-		{
-			combo++; 
+			combo++;
 			image_index = 0;
 			permitir_atk = true;
 			ataque_multi += .5;
-		if (dano)
+			if(dano)
 			{
 				instance_destroy(dano, false);
 				dano = noone;
 			}
-			
-			//Zerar o buff
-			buff = 0;
 		}
 		
-		
-		if (image_index > image_number - 1)
-	{
+		if(image_index > image_number - 1)
+		{
 			estado = "parado";
 			velh = 0;
 			combo = 0;
 			permitir_atk = true;
 			ataque_multi = 1;
-		if (dano)
-		{
-			instance_destroy(dano, false);
-			dano = noone;
+			if(dano)
+			{
+				instance_destroy(dano, false);
+				dano = noone;
+			}
 		}
-		
-		if (velv != 0)
-		{
-			estado = "pulo";
-			image_index = 0;
-		}
-	}
 		break;
 }
-	#endregion
-	
- 	#region Defesa
-	/*case "defesa":
-	{
-		sprite_index = spr_player_defesa;
-		
-		//Saindo do estado
-		 if (image_index >= image_index)
-		{
-			estado = "parado"
-			velh = 0;
-		}
-		break;
-	}*/
-	
 	#endregion
 	
 	#region Hit
 	case "hit":
 	{
+		vida_atual -= 1;
+		if(vida_atual < 0)
+		{
+			vida_atual = 0;
+		}
 		if(sprite_index != spr_player_hurt)
 		{
 			sprite_index = spr_player_hurt;
@@ -244,13 +199,7 @@ switch(estado)
 			invencivel = true;
 			tempo_invencivel = invencivel_timer;
 		}
-		
-		//Reduz a vida do jogador
-		if (estado != "defesa")
-		{
-		obj_player.vida -= 1;
-		}
-		
+	
 		//Ficando parado apos hit
 		velh = 0;
 		
@@ -268,11 +217,6 @@ switch(estado)
 			{
 				estado = "morto";
 			}
-		}
-		
-		if(image_index >= image_number - 1)
-		{
-			estado = "parado";
 		}
 		break;
 	}

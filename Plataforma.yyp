@@ -121,10 +121,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_initi","path":"rooms/rm_initi/rm_initi.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_fase_1","path":"rooms/rm_fase_1/rm_fase_1.yy",},},
     {"roomId":{"name":"rm_chefe","path":"rooms/rm_chefe/rm_chefe.yy",},},
-    {"roomId":{"name":"rm_initi","path":"rooms/rm_initi/rm_initi.yy",},},
     {"roomId":{"name":"rm_menu_op","path":"rooms/rm_menu_op/rm_menu_op.yy",},},
   ],
   "templateType":"game",

@@ -37,7 +37,7 @@
     {"name":"obj_entidade","order":3,"path":"objects/obj_entidade/obj_entidade.yy",},
     {"name":"obj_espinhos","order":17,"path":"objects/obj_espinhos/obj_espinhos.yy",},
     {"name":"obj_hitbox","order":2,"path":"objects/obj_hitbox/obj_hitbox.yy",},
-    {"name":"obj_hud","order":1,"path":"objects/obj_hud/obj_hud.yy",},
+    {"name":"obj_hud","order":9,"path":"objects/obj_hud/obj_hud.yy",},
     {"name":"obj_inimigo_pai","order":6,"path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",},
     {"name":"obj_jogo_controle","order":4,"path":"objects/obj_jogo_controle/obj_jogo_controle.yy",},
     {"name":"obj_menu_op","order":23,"path":"objects/obj_menu_op/obj_menu_op.yy",},
